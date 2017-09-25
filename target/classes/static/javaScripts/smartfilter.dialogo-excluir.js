@@ -1,6 +1,6 @@
-AgroWeb = AgroWeb || {};
+SmartFilter = SmartFilter || {};
 
-AgroWeb.DialogoExcluir = (function() {
+SmartFilter.DialogoExcluir = (function() {
  
  function DialogoExcluir() {
   this.exclusaoBtn = $('.js-exclusao-btn')
@@ -57,6 +57,6 @@ AgroWeb.DialogoExcluir = (function() {
 }());
 
 $(function() {
- var dialogo = new AgroWeb.DialogoExcluir();
+ var dialogo = new SmartFilter.DialogoExcluir();
  dialogo.iniciar();
 });

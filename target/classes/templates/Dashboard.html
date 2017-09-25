@@ -19,74 +19,12 @@
 	</div>
 	
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="aw-box">
-					<div class="aw-box__icon">
-						<i class="fa  fa-heartbeat  fa-3x"></i>
-					</div>
-					<div class="aw-box__value">R$[[${{valorTotalIngrediente}}]]</div>
-					<div class="aw-box__title">Valor do Estoque</div>
-				</div>
-			</div>
 			
-			<div class="col-sm-4">
-				<div class="aw-box">
-					<div class="aw-box__icon">
-						<i class="fa  fa-hashtag  fa-3x"></i>
-					</div>	
-				<div class="aw-box__value">[[${{totalDeAnimais}}]]</div>
-				<div class="aw-box__title">Total de animais</div>
-			</div>
-		</div>
-		
-		<div class="col-sm-4">
-			<div class="aw-box">
-				<div class="aw-box__icon">
-					<i class="fa  fa-users  fa-3x"></i>
-				</div>
-				<div class="aw-box__value">[[${{totalDeCompradores}}]]</div>
-				<div class="aw-box__title">Compradores</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="col-sm-4">
-				<div class="aw-box">
-					<div class="aw-box__icon">
-						<i class="fa  fa-usd  fa-3x"></i>
-					</div>
-					<div class="aw-box__value">R$3.542,59</div>
-					<div class="aw-box__title">Vendas no ano</div>
-				</div>
-			</div>
-			
-			<div class="col-sm-4">
-				<div class="aw-box">
-					<div class="aw-box__icon">
-						<i class="fa  fa-signal  fa-3x"></i>
-					</div>
-					<div class="aw-box__value">R$1.233,40</div>
-					<div class="aw-box__title">Vendas no mês</div>
-				</div>
-			</div>
-			
-			<div class="col-sm-4">
-				<div class="aw-box">
-					<div class="aw-box__icon">
-						<i class="fa  fa-shopping-cart  fa-3x"></i>
-					</div>
-					<div class="aw-box__value">R$[[${{totalDeDespesa}}]]</div>
-					<div class="aw-box__title">Despesa no Ano</div>
-				</div>
-			</div>
-		</div>	
-<div class="row">
+    <div class="row">
 			<div class="col-sm-6">
 				<div class="aw-graph-box">
 					<div class="aw-graph-box__header">
-						<h2 class="aw-graph-box__title">Vendas por mês <small>últimos 6 meses</small></h2>
+						<h2 class="aw-graph-box__title">Despesas mensais </h2>
 					</div>
 					<div class="aw-graph-box__content">
 						<div class="aw-graph-box__no-data">
@@ -103,7 +41,7 @@
 			<div class="col-sm-6">
 				<div class="aw-graph-box">
 					<div class="aw-graph-box__header">
-						<h2 class="aw-graph-box__title">Despesa por mês <small>últimos 6 meses</small></h2>
+						<h2 class="aw-graph-box__title">Despesas semestrais </h2>
 					</div>
 					<div class="aw-graph-box__content">
 						<div class="aw-graph-box__no-data">
@@ -111,16 +49,30 @@
 							<span>Não há dados</span>
 						</div>
 						<div>
-							<canvas id="barChart" height="160"></canvas>
+							<canvas id="graficoDespesaPorMes" height="160"></canvas>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		
+		<div class="row">
+			<div class="col-sm-12.5">
+				<div class="aw-box">
+					<div class="aw-box__icon">
+						<i class="fa  fa-usd  fa-3x"></i>
+					</div>
+					<div class="aw-box__value">R$[[${{valorMedioMensal}}]]</div>
+					<div class="aw-box__title">Valor estimado mensal</div>
+				</div>
+			</div>
+	    </div>
+		
 	</div>
 </section>
 
 <th:block layout:fragment="javascript-extra">
+	<script th:src="@{/javaScripts/dashboard.graficos.js}"></script>
 </th:block>
 
 </html>

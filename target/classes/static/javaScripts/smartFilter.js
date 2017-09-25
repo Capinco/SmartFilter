@@ -1,6 +1,6 @@
-var AgroWeb = AgroWeb || {};
+var SmartFilter = SmartFilter || {};
 
-AgroWeb.MaskMoney = (function(){
+SmartFilter.MaskMoney = (function(){
 	function MaskMoney(){
 		this.decimal = $('.js-decimal');
 		this.plain = $('.js-plain')
@@ -15,7 +15,7 @@ AgroWeb.MaskMoney = (function(){
 	
 }());
 
-AgroWeb.MaskPhoneNumber = (function() {
+SmartFilter.MaskPhoneNumber = (function() {
 	
 	function MaskPhoneNumber() {
 		this.inputPhoneNumber = $('.js-phone-number');
@@ -39,7 +39,7 @@ AgroWeb.MaskPhoneNumber = (function() {
 	
 }());
 
-AgroWeb.MaskCep = (function() {
+SmartFilter.MaskCep = (function() {
 	
 	function MaskCep() {
 		this.inputCep = $('.js-cep');
@@ -53,7 +53,7 @@ AgroWeb.MaskCep = (function() {
 	
 }());
 
-AgroWeb.MaskDate = (function() {
+SmartFilter.MaskDate = (function() {
 	
 	function MaskDate() {
 		this.inputDate = $('.js-date');
@@ -72,7 +72,7 @@ AgroWeb.MaskDate = (function() {
 	
 }());
 
-AgroWeb.Security = (function() {
+SmartFilter.Security = (function() {
 	
 	function Security() {
 		this.token = $('input[name=_csrf]').val();
@@ -91,27 +91,27 @@ AgroWeb.Security = (function() {
 
 numeral.language('pt-br');
 
-AgroWeb.formatarMoeda = function(valor) {
+SmartFilter.formatarMoeda = function(valor) {
 	return numeral(valor).format('0,0.00');
 }
 
-AgroWeb.recuperarValor = function(valorFormatado) {
+SmartFilter.recuperarValor = function(valorFormatado) {
 	return numeral().unformat(valorFormatado);
 }
 
 $(function() {
-	var maskMoney = new AgroWeb.MaskMoney(); 
+	var maskMoney = new SmartFilter.MaskMoney(); 
 	maskMoney.enable();
 	
-	var maskPhoneNumber = new AgroWeb.MaskPhoneNumber();
+	var maskPhoneNumber = new SmartFilter.MaskPhoneNumber();
 	maskPhoneNumber.enable();
 	
-	var maskCep = new AgroWeb.MaskCep();
+	var maskCep = new SmartFilter.MaskCep();
 	maskCep.enable();	
 	
-	var maskDate = new AgroWeb.MaskDate();
+	var maskDate = new SmartFilter.MaskDate();
 	maskDate.enable();
 	
-	var security = new AgroWeb.Security();
+	var security = new SmartFilter.Security();
 	security.enable();
 }); 

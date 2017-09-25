@@ -4,7 +4,7 @@
 	xmlns:data="http://www.thymeleag.org/extras/data"
 	xmlns:layout="http://www.ultraq.net.nz/http://thymeleaf.org/layout"
 	layout:decorate="~{layout/LayoutPadrao}"
-	xmlns:agroWeb="http://www.agroWeb.insightsoftware.com"
+	xmlns:smartFilter="http://www.smartFilter.insightsoftware.com"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
 	<title>Pesquisa de usuários</title>
@@ -128,7 +128,7 @@
          	</table>
     	 </div>
     	 
-    	 <agroWeb:pagination page="${pagina}"/>
+    	 <smartFilter:pagination page="${pagina}"/>
 	</div>
 </section>
 <th:block layout:fragment="javascript-extra">

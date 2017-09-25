@@ -1,7 +1,7 @@
-AgroWeb = AgroWeb || {};
+SmartFilter = SmartFilter || {};
 
 
-AgroWeb.MultiSelecao = (function(){
+SmartFilter.MultiSelecao = (function(){
 	
 	function MultiSelecao() {
 		this.statusBtn = $('.js-satatus-btn');
@@ -62,6 +62,6 @@ AgroWeb.MultiSelecao = (function(){
 }());
 
 $(function() {
-	var multiselecao = new AgroWeb.MultiSelecao();
+	var multiselecao = new SmartFilter.MultiSelecao();
 	multiselecao.iniciar();
 });

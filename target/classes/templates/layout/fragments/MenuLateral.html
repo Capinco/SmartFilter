@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th ="http://thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/http://thymeleaf.org/layout"
-	xmlns:agroWeb="http://www.agroWeb.insightsoftware.com">	
+	xmlns:smartFilter="http://www.smartFilter.insightsoftware.com">	
 <body>
 <aside class="aw-layout-sidebar  js-sidebar" th:fragment="layout-sidebar">
 	<div class="aw-layout-sidebar__content">
 	    <nav class="aw-menu  js-menu">
 	    	<ul class="aw-menu__list">
-		        <li class="aw-menu__item" agroWeb:menu="@{/}">
+		        <li class="aw-menu__item" smartFilter:menu="@{/}">
           			<a th:href="@{/}"><i class="fa  fa-fw  fa-home"></i><span>Dashboard</span></a>
 				</li>
 		
@@ -19,7 +19,7 @@
 		          </a>
 		      
 		          <ul class="aw-menu__list  aw-menu__list--sublist">
-		            <li class="aw-menu__item  aw-menu__item--link" agroWeb:menu="@{/usuarios}">
+		            <li class="aw-menu__item  aw-menu__item--link" smartFilter:menu="@{/usuarios}">
 		            	<a th:href="@{/usuarios}">Usuarios</a>
 		            </li>		          
 		          </ul>
